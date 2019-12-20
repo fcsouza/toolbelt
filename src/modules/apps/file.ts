@@ -155,7 +155,7 @@ export const getIgnoredPaths = (root: string, test: boolean = false): string[] =
 
 export const listLocalFiles = (root: string, test: boolean = false, folder?: string): Promise<string[]> =>
   Promise.resolve(
-    glob(['manifest.json', 'policies.json', 'node/.*', 'react/.*', `${safeFolder(folder)}`], {
+    glob(['manifest.json', 'policies.json', 'node/.*', 'react/.*', 'metaBuilder/.*', `${safeFolder(folder)}`], {
       cwd: root,
       follow: true,
       ignore: getIgnoredPaths(root, test),
