@@ -488,4 +488,16 @@ export default {
       requiredArgs: 'edition',
     },
   },
+  logs: {
+    description: 'Show logs of an app on the current directory or a specified one',
+    handler: './apps/logs',
+    optionalArgs: 'app',
+    options: [
+      {
+        description: 'Show logs of all apps installed in your account',
+        long: 'all',
+        type: 'boolean',
+      },
+    ],
+  },
 }
