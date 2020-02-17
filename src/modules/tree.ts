@@ -496,6 +496,7 @@ export default {
       {
         description: 'Show logs of all apps installed in your account',
         long: 'all',
+        short: 'a',
         type: 'boolean',
       },
     ],
