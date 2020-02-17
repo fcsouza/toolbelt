@@ -9,11 +9,11 @@ export default async (optionalApp: string, options) => {
   const account = getAccount()
   const workspace = getWorkspace()
   const skidderMajor = 0
-  
+
   const conf = {
     headers: {
       Authorization: `bearer ${getToken()}`,
-      'user-agent': userAgent
+      'user-agent': userAgent,
     },
   }
 
@@ -45,7 +45,7 @@ export default async (optionalApp: string, options) => {
       log.log(msg.data)
     })
   }
-  
+
   createEventSource()
 
   console.log('Press CTRL+C to abort')
@@ -53,6 +53,6 @@ export default async (optionalApp: string, options) => {
   function wait() {
     setTimeout(wait, 1000)
   }
-  
+
   wait()
 }
