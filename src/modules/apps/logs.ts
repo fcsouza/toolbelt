@@ -42,7 +42,7 @@ export default async (optionalApp: string, options) => {
     }
 
     es.addEventListener('message', msg => {
-      log.log(msg.data)
+      console.log(msg.data)
     })
   }
 
